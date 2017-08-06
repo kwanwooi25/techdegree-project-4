@@ -9,6 +9,7 @@ BASE LAYOUT
 }
 
 body {
+  font-family: 'Saira', sans-serif;
   width: 95%;
   max-width: 1024px;
   margin: 0 auto;
@@ -23,7 +24,8 @@ HEADER
   text-align: center;
 }
 
-.search input[type="text"] {
+.input-search {
+  font-family: 'Saira', sans-serif;
   width: 70%;
   height: 2.4em;
   padding: 0 1em;
@@ -32,7 +34,7 @@ HEADER
   border-radius: 5px;
 }
 
-.search input[type="text"]:focus {
+.input-search:focus {
   outline: none;
 }
 
@@ -43,20 +45,31 @@ GALLERY
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .thumbnail {
   flex: auto;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  margin: 15px auto;
+  border: 1.5px solid #fff;
+  border-radius: 3px;
 }
 
 .thumbnail:hover {
-  background-color: #eee;
+  border: 1.5px solid #94C3EA;
   transition: .5s;
 }
 
 .thumbnail img {
   width: 100%;
+}
+
+/************************************************
+CHOCOLAT
+************************************************/
+
+.chocolat-wrapper .chocolat-bottom {
+  background-color: rgba(0,0,0,.5);
 }
