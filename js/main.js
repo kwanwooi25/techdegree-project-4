@@ -1,12 +1,19 @@
-$('.chocolat-image').each(function() {
-  var titleForChocolat = '<strong>'
-                        + $(this).children('img').attr('alt')
-                        + '</strong> - '
-                        + $(this).children('img').attr('caption');
-  $(this).attr('title', titleForChocolat);
+// Search
+$('.input-search').on('keyup',function() {
+  var $searchText = $(this).val().toLowerCase();
+  if ($searchText === '') {
+    $('img').parent().show();
+  } else {
+    $('img').parent().hide();
+    $('img[alt*=' + $searchText + ']').parent().show();
+  }
 });
 
-$('.gallery').Chocolat({
-  imageSize: 'cover',
-  loop: true
+//Lightbox - lightGallery
+var $lg = $('.gallery');
+$lg.lightGallery({
+  mode: 'lg-fade',
+  speed: 300,
+  download: false,
+  counter: false
 });

@@ -15,6 +15,12 @@ body {
   margin: 0 auto;
 }
 
+hr {
+  color: #bbb;
+  width: 75%;
+  margin: 10px auto 20px;
+}
+
 /************************************************
 HEADER
 ************************************************/
@@ -43,18 +49,19 @@ GALLERY
 ************************************************/
 
 .gallery {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
 }
 
 .thumbnail {
-  flex: auto;
-  text-align: center;
+  width: 50%;
   padding: 10px;
-  margin: 15px auto;
+  margin: 15px 0;
   border: 1.5px solid #fff;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .thumbnail:hover {
@@ -64,12 +71,40 @@ GALLERY
 
 .thumbnail img {
   width: 100%;
+  border-radius: 5px;
 }
 
 /************************************************
-CHOCOLAT
+FOOTER
 ************************************************/
 
-.chocolat-wrapper .chocolat-bottom {
-  background-color: rgba(0,0,0,.5);
+footer {
+  font-size: .8em;
+  color: #bbb;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/************************************************
+LIGHTBOX
+************************************************/
+
+.lg-sub-html {
+  background-color: rgba(0,0,0,.7);
+}
+
+/************************************************
+MEDIA QUERIES
+************************************************/
+
+@media (min-width: 768px) {
+  .thumbnail {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .thumbnail {
+    width: 25%;
+  }
 }
